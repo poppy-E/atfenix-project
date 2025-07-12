@@ -1,0 +1,11 @@
+# FRONTEND: atfenix
+atfenix/.env.local
+atfenix/node_modules
+atfenix/.next
+
+# BACKEND: atfenix-backend
+atfenix-backend/.env
+atfenix-backend/node_modules
+
+# System files
+.DS_Store
