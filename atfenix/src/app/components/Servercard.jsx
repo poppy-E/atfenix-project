@@ -1,6 +1,6 @@
 export default function ServerCard({ server, formatDate, renderStatus }) {
   return (
-    <div className="bg-grey-100 p-4 shadow rounded-xl transition hover:shadow-md">
+    <div className="bg-white p-4 shadow rounded-xl transition hover:shadow-md">
       <h2 className="text-xl font-semibold mb-2">{server.name}</h2>
       <p>Status: {renderStatus(server.status)}</p>
       <p className="text-sm text-gray-600">

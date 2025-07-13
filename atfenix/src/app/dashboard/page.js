@@ -7,10 +7,8 @@ import ServerCard from "@/app/components/ServerCard";
 
 export default function DashboardPage() {
   const [servers, setServers] = useState([]);
-
   useEffect(() => {
     fetchServers();
-
     const channel = supabase
       .channel("servers-db-changes")
       .on(
@@ -34,24 +32,12 @@ export default function DashboardPage() {
       .from("servers")
       .select("*");
 
-    const { data: uptimeData, error: uptimeError } = await supabase
-      .from("server_uptime")
-      .select("*");
-
-    if (serversError || uptimeError) {
-      console.error("Error fetching data:", serversError || uptimeError);
+    if (serversError) {
+      console.error("Error fetching data:", serversError);
       return;
     }
 
-    const merged = serversData.map((server) => {
-      const uptime = uptimeData.find((u) => u.server_id === server.id);
-      return {
-        ...server,
-        uptime_percentage: uptime?.uptime_percentage ?? null,
-      };
-    });
-
-    setServers(merged);
+    setServers(serversData);
   }
 
   function formatDate(datetime) {

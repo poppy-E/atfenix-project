@@ -37,6 +37,7 @@ export async function checkServers() {
       const responseTime = result.alive ? parseFloat(result.time) : null;
       const now = new Date().toISOString();
 
+      // Log ping result
       const { error: logError } = await supabase.from("ping_logs").insert({
         server_id: server.id,
         status,
@@ -52,11 +53,42 @@ export async function checkServers() {
         );
       }
 
+      // Fetch current counts
+      const { data: currentData, error: fetchError } = await supabase
+        .from("servers")
+        .select("total_pings, successful_pings")
+        .eq("id", server.id)
+        .single();
+
+      if (fetchError) {
+        console.error(
+          `Failed to fetch ping counters for ${server.name}:`,
+          fetchError.message
+        );
+        continue;
+      }
+
+      let total_pings = currentData.total_pings || 0;
+      let successful_pings = currentData.successful_pings || 0;
+
+      total_pings++;
+      if (status === "up") {
+        successful_pings++;
+      }
+
+      const uptime_percentage = parseFloat(
+        ((successful_pings / total_pings) * 100).toFixed(2)
+      );
+
+      // Update server status
       const { error: updateError } = await supabase
         .from("servers")
         .update({
           status,
           last_checked: now,
+          total_pings,
+          successful_pings,
+          uptime_percentage,
         })
         .eq("id", server.id);
 
@@ -66,7 +98,9 @@ export async function checkServers() {
           updateError.message
         );
       } else {
-        console.log(`✅ ${server.name} (${server.ip_address}) is ${status}`);
+        console.log(
+          `✅ ${server.name} (${server.ip_address}) is ${status} | Uptime: ${uptime_percentage}%`
+        );
       }
     } catch (err) {
       console.error(`Error pinging ${server.name}:`, err.message);
