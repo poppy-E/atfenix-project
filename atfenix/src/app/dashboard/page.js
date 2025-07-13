@@ -65,18 +65,23 @@ export default function DashboardPage() {
     const map = {
       online: { label: "🟢 Online", color: "text-green-600" },
       offline: { label: "🔴 Offline", color: "text-red-600" },
+      up: { label: "🟢 Online", color: "text-green-600" },
+      down: { label: "🔴 Offline", color: "text-red-600" },
       unknown: { label: "🟡 Unknown", color: "text-yellow-600" },
     };
     const { label, color } = map[normalized] || {
       label: "⚪ No Status",
       color: "text-gray-600",
     };
+
     return <span className={`font-medium ${color}`}>{label}</span>;
   }
 
   return (
     <main className="p-6 bg-[#FAF9F6] min-h-screen font-poppins">
-      <h1 className="text-3xl font-bold mb-6">Server Monitoring Dashboard</h1>
+      <h1 className="text-3xl font-bold mb-6" style={{ color: "#1864ab" }}>
+        Server Monitoring Dashboard
+      </h1>
 
       {servers.length === 0 ? (
         <p className="text-gray-500">No servers found.</p>

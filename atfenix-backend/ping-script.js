@@ -27,7 +27,13 @@ export async function checkServers() {
         extra: ["-c", "1"],
       });
 
-      const status = result.alive ? "online" : "offline";
+      let status;
+      if (typeof result.alive === "boolean") {
+        status = result.alive ? "up" : "down";
+      } else {
+        status = "unknown";
+      }
+
       const responseTime = result.alive ? parseFloat(result.time) : null;
       const now = new Date().toISOString();
 
@@ -36,6 +42,7 @@ export async function checkServers() {
         status,
         response_time: responseTime,
         pinged_at: now,
+        source: "default",
       });
 
       if (logError) {
@@ -63,6 +70,14 @@ export async function checkServers() {
       }
     } catch (err) {
       console.error(`Error pinging ${server.name}:`, err.message);
+
+      await supabase.from("ping_logs").insert({
+        server_id: server.id,
+        status: "error",
+        response_time: null,
+        pinged_at: new Date().toISOString(),
+        source: "default",
+      });
     }
   }
 }
