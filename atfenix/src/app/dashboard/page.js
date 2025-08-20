@@ -1,9 +1,10 @@
 "use client";
-
+import Header from "../components/header";
 import { useEffect, useState } from "react";
 import { supabase } from "@/app/lib/supabase";
 import UptimeChart from "@/app/components/UptimeChart";
 import ServerCard from "@/app/components/ServerCard";
+import Footer from "../components/Footer";
 // import ServerstatusCard from "@/app/components/ServerstatusCard";
 
 export default function DashboardPage() {
@@ -73,39 +74,43 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="p-6 bg-[#FAF9F6] min-h-screen font-poppins">
-      <h1
-        className=" flex justify-center text-3xl font-bold mb-8 "
-        style={{ color: "#000000" }}
-      >
-        Server Monitoring Dashboard
-      </h1>
+    <>
+      <Header />
+      <main className="p-6 bg-[#FAF9F6] min-h-screen font-poppins py-14 px-10">
+        <h1
+          className=" flex justify-center text-3xl font-bold mb-12 mt-24 "
+          style={{ color: "#000000" }}
+        >
+          Server Monitoring Dashboard
+        </h1>
 
-      {servers.length === 0 ? (
-        <p className="text-gray-500">No servers found.</p>
-      ) : (
-        <div className="grid grid-cols-1 gap-6 mt-5 lg:grid-cols-3">
-          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 gap-4 col-span-2">
-            {servers.map((server) => (
-              <ServerCard
-                key={server.id}
-                server={server}
-                formatDate={formatDate}
-                renderStatus={renderStatus}
+        {servers.length === 0 ? (
+          <p className="text-gray-500">No servers found.</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-6 mt-5 lg:grid-cols-3">
+            <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 gap-4 col-span-2">
+              {servers.map((server) => (
+                <ServerCard
+                  key={server.id}
+                  server={server}
+                  formatDate={formatDate}
+                  renderStatus={renderStatus}
+                />
+              ))}
+            </div>
+            {/* <div className="flex items-center justify-center"> */}
+            <div className="col-span-1 flex items-center justify-center mt-4 lg:mt-0">
+              <UptimeChart
+                data={servers.map((server) => ({
+                  name: server.name,
+                  uptime_percentage: server.uptime_percentage ?? 0,
+                }))}
               />
-            ))}
+            </div>
           </div>
-          {/* <div className="flex items-center justify-center"> */}
-          <div className="col-span-1 flex items-center justify-center mt-4 lg:mt-0">
-            <UptimeChart
-              data={servers.map((server) => ({
-                name: server.name,
-                uptime_percentage: server.uptime_percentage ?? 0,
-              }))}
-            />
-          </div>
-        </div>
-      )}
-    </main>
+        )}
+      </main>
+      <Footer />
+    </>
   );
 }
