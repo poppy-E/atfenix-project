@@ -147,7 +147,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="/dedicated-server.html"
+                  href="https://atfenix.bartleyco.us/dedicated-server.html"
                   className="text-gray-600 hover:text-orange-500 transition-colors duration-300 flex items-center group"
                 >
                   <Server
@@ -159,7 +159,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/vps.html"
+                  href="https://atfenix.bartleyco.us/vps.html"
                   className="text-gray-600 hover:text-orange-500 transition-colors duration-300 flex items-center group"
                 >
                   <Cloud
@@ -171,7 +171,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/co-location.html"
+                  href="https://atfenix.bartleyco.us/co-location.html"
                   className="text-gray-600 hover:text-orange-500 transition-colors duration-300 flex items-center group"
                 >
                   <Building
@@ -193,7 +193,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="/contact-us.html"
+                  href="https://atfenix.bartleyco.us/contact-us.html"
                   className="text-gray-600 hover:text-blue-500 transition-colors duration-300 flex items-center group"
                 >
                   <Replace
@@ -205,7 +205,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/about-us.html"
+                  href="https://atfenix.bartleyco.us/about-us.html"
                   className="text-gray-600 hover:text-blue-500 transition-colors duration-300 flex items-center group"
                 >
                   <LineChart
@@ -381,31 +381,31 @@ const Footer = () => {
 
             <div className="flex flex-wrap justify-center lg:justify-end space-x-6">
               <a
-                href="/legal/privacy-policy.html"
+                href="https://atfenix.bartleyco.us/legal/privacy-policy.html"
                 className="text-gray-600 hover:text-orange-500 text-sm transition-colors duration-300"
               >
                 Privacy Policy
               </a>
               <a
-                href="/legal/terms-of-service.html"
+                href="https://atfenix.bartleyco.us/legal/terms-of-service.html"
                 className="text-gray-600 hover:text-orange-500 text-sm transition-colors duration-300"
               >
                 Terms of Service
               </a>
               <a
-                href="/legal/sla.html"
+                href="https://atfenix.bartleyco.us/legal/sla.html"
                 className="text-gray-600 hover:text-orange-500 text-sm transition-colors duration-300"
               >
                 SLA
               </a>
               <a
-                href="/legal/aup.html"
+                href="https://atfenix.bartleyco.us/legal/aup.html"
                 className="text-gray-600 hover:text-orange-500 text-sm transition-colors duration-300"
               >
                 AUP
               </a>
               <a
-                href="/legal/dpa.html"
+                href="https://atfenix.bartleyco.us/legal/dpa.html"
                 className="text-gray-600 hover:text-orange-500 text-sm transition-colors duration-300"
               >
                 DPA

@@ -198,7 +198,10 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex items-center">
-              <a href="index.html" className="flex-shrink-0 group">
+              <a
+                href="https://atfenix.bartleyco.us/index.html"
+                className="flex-shrink-0 group"
+              >
                 <div className="flex items-center space-x-3">
                   <img
                     src="/images/atfenixlogo.png"
@@ -215,28 +218,28 @@ const Header = () => {
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a
-                href="index.html"
+                href="https://atfenix.bartleyco.us/index.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 Home
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></div>
               </a>
               <a
-                href="co-location.html"
+                href="https://atfenix.bartleyco.us/co-location.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 Colocation
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></div>
               </a>
               <a
-                href="vps.html"
+                href="https://atfenix.bartleyco.us/vps.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 VPS
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></div>
               </a>
               <a
-                href="dedicated-server.html"
+                href="https://atfenix.bartleyco.us/dedicated-server.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 Dedicated
@@ -265,25 +268,25 @@ const Header = () => {
                     </div>
                     <div className="absolute hidden group-hover/policies:block top-0 right-full mr-1 w-56 bg-white border border-gray-200 rounded-lg shadow-xl">
                       <a
-                        href="legal/privacy-policy.html"
+                        href="https://atfenix.bartleyco.us/legal/privacy-policy.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Privacy Policy
                       </a>
                       <a
-                        href="legal/terms-of-service.html"
+                        href="https://atfenix.bartleyco.us/legal/terms-of-service.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Terms of Service
                       </a>
                       <a
-                        href="legal/refund-policy.html"
+                        href="https://atfenix.bartleyco.us/legal/refund-policy.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Refund & Cancellation
                       </a>
                       <a
-                        href="legal/copyright.html"
+                        href="https://atfenix.bartleyco.us/legal/copyright.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Copyright Policy
@@ -297,56 +300,56 @@ const Header = () => {
                     </div>
                     <div className="absolute hidden group-hover/compliance:block top-0 right-full mr-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl">
                       <a
-                        href="/legal/sla.html"
+                        href="https://atfenix.bartleyco.us/legal/sla.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Service Level Agreement
                       </a>
                       <a
-                        href="/legal/aup.html"
+                        href="https://atfenix.bartleyco.us/legal/aup.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Acceptable Use Policy
                       </a>
                       <a
-                        href="/legal/dpa.html"
+                        href="https://atfenix.bartleyco.us/legal/dpa.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Data Processing Agreement
                       </a>
                       <a
-                        href="/legal/scs.html"
+                        href="https://atfenix.bartleyco.us/legal/scs.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Security & Compliance
                       </a>
 
                       <a
-                        href="/legal/dr.html"
+                        href="https://atfenix.bartleyco.us/legal/dr.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Disaster Recovery
                       </a>
                       <a
-                        href="/legal/esp.html"
+                        href="https://atfenix.bartleyco.us/legal/esp.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Environmental Policy
                       </a>
                       <a
-                        href="/legal/ca.html"
+                        href="https://atfenix.bartleyco.us/legal/ca.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Colocation Agreement
                       </a>
                       <a
-                        href="/legal/csa.html"
+                        href="https://atfenix.bartleyco.us/legal/csa.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Cloud Services Agreement
                       </a>
                       <a
-                        href="/legal/irp.html"
+                        href="https://atfenix.bartleyco.us/legal/irp.html"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-light"
                       >
                         Incident Response Policy
@@ -356,14 +359,14 @@ const Header = () => {
                 </div>
               </div>
               <a
-                href="about-us.html"
+                href="https://atfenix.bartleyco.us/about-us.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 About
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light group-hover:w-full transition-all duration-300"></div>
               </a>
               <a
-                href="contact-us.html"
+                href="https://atfenix.bartleyco.us/contact-us.html"
                 className="text-gray-700 hover:text-primary-light font-medium transition-colors duration-300 relative group"
               >
                 Contact
@@ -392,10 +395,14 @@ const Header = () => {
       <div className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}>
         <div className="mobile-menu-scroll-area p-2">
           <nav className="mobile-menu-nav">
-            <a href="index.html">Home</a>
-            <a href="co-location.html">Colocation</a>
-            <a href="vps.html">VPS</a>
-            <a href="dedicated-server.html">Dedicated</a>
+            <a href="https://atfenix.bartleyco.us/index.html">Home</a>
+            <a href="https://atfenix.bartleyco.us/co-location.html">
+              Colocation
+            </a>
+            <a href="https://atfenix.bartleyco.us/vps.html">VPS</a>
+            <a href="https://atfenix.bartleyco.us/dedicated-server.html">
+              Dedicated
+            </a>
             <div className="mobile-dropdown">
               <button
                 className={`mobile-dropdown-toggle ${
@@ -415,10 +422,18 @@ const Header = () => {
                   isPoliciesOpen ? "active" : ""
                 }`}
               >
-                <a href="/legal/privacy-policy.html">Privacy Policy</a>
-                <a href="/legal/terms-of-service.html">Terms of Service</a>
-                <a href="/legal/refund-policy.html">Refund & Cancellation</a>
-                <a href="/legal/copyright.html">Copyright Policy</a>
+                <a href="https://atfenix.bartleyco.us/legal/privacy-policy.html">
+                  Privacy Policy
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/terms-of-service.html">
+                  Terms of Service
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/refund-policy.html">
+                  Refund & Cancellation
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/copyright.html">
+                  Copyright Policy
+                </a>
               </div>
             </div>
             <div className="mobile-dropdown">
@@ -440,19 +455,35 @@ const Header = () => {
                   isComplianceOpen ? "active" : ""
                 }`}
               >
-                <a href="/legal/sla.html">Service Level Agreement</a>
-                <a href="/legal/aup.html">Acceptable Use Policy</a>
-                <a href="/legal/dpa.html">Data Processing Agreement</a>
-                <a href="/legal/scs.html">Security & Compliance</a>
-                <a href="/legal/dr.html">Disaster Recovery</a>
-                <a href="/legal/esp.html">Environmental Policy</a>
-                <a href="/legal/ca.html">Colocation Agreement</a>
-                <a href="/legal/csa.html">Cloud Services Agreement</a>
-                <a href="/legal/irp.html">Incident Response Policy</a>
+                <a href="https://atfenix.bartleyco.us/legal/sla.html">
+                  Service Level Agreement
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/aup.html">
+                  Acceptable Use Policy
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/dpa.html">
+                  Data Processing Agreement
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/scs.html">
+                  Security & Compliance
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/dr.html">
+                  Disaster Recovery
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/esp.html">
+                  Environmental Policy
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/ca.html">
+                  Colocation Agreement
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/csa.html">
+                  Cloud Services Agreement
+                </a>
+                <a href="https://atfenix.bartleyco.us/legal/irp.html">Incident Response Policy</a>
               </div>
             </div>
-            <a href="about-us.html">About</a>
-            <a href="contact-us.html">Contact</a>
+            <a href="https://atfenix.bartleyco.us/about-us.html">About</a>
+            <a href="https://atfenix.bartleyco.us/contact-us.html">Contact</a>
           </nav>
         </div>
         <div className="mobile-menu-footer p-4 mt-auto border-t border-gray-700">
